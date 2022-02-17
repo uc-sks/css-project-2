@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Project-2</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="container">
+        <div class="header">
+          <h4>Consolidate</h4>
+          <div class="rightIcon">
+            <img src="./img/help.png" alt="" class="help">
+            <img src="./img/close.svg" alt="">
+          </div>
+        </div>
+        <div class="contentContainer">
+          <div class="functionsDiv">
+            <label for="function" class="functionLable">Function:</label>
+            <div class="function">
+              <input type="text" placeholder="sum">
+              <img src="./img/dropdown.svg" alt="">
+            </div>
+          </div>
+          <div class="reference">
+            <label for="reference" class="functionLable">Reference:</label>
+            <div class="browseContent">
+              <div class="browse">
+                <input type="text" id="reference" />
+                <img src="./img/browse.png" alt="">
+              </div>
+              <button class="browseButton allbutton">Browse...</button>
+            </div>
+          </div>
+          <div class="allReference reference">
+            <label for="allReference" class="">All Reference:</label>
+            <div class="Content">
+              <div class="addBrowse">
+                  <textarea name="allReference" id="allReference" cols="50" rows="4"></textarea>
+              </div>
+              <div class="buttons">
+                  <button class="add allbutton">Add</button>
+                  <button class="delete allbutton">Delete</button>
+                </div>
+            </div>
+          </div>
+          <div class="checkList">
+            <form>
+                <fieldset>
+                 <legend>Use labels in</legend>
+                 <div class="checklistContent">
+                     <input type="checkbox" name="" id="">
+                     <label for="">Top row</label>
+                 </div>
+                 <div class="checklistContent">
+                    <input type="checkbox" name="" id="">
+                    <label for="">Left column</label>
+                 </div>
+                </fieldset>
+                <div class="create">
+                  <input type="checkbox" name="create" id="create">
+                  <label for="create">Create links to source data</label>
+                </div>
+               </form>
+          </div>
+          <div class="actionButton reference">
+            <button class="allbutton ok">Ok</button>
+            <button class="allbutton">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
