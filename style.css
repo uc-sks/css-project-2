@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.mainContainer,.container,.header,.rightIcon,.function,.functionsDiv,.browseContent,.browse,.Content ,.buttons,form,.actionButton{
+.mainContainer,.container,.checklistContent,.header,.rightIcon,.function,.functionsDiv,.browseContent,.browse,.Content ,.buttons,form,.actionButton{
   display: flex;
 }
 .function,.browse,.addBrowse{
@@ -53,17 +53,20 @@
   padding: 7px;
   background-color: rgb(236, 233, 216);
 }
-.functionsDiv {
+.functionsDiv , .buttons{
   flex-direction: column;
 }
 .function {
   width: 50%;
   padding: 1px 0px;
-  margin-top: 1px;
   outline: none;
+  appearance: none;
+  background: transparent url(./img/dropdown.svg) no-repeat 100% center;
 }
 .function > input ,.browse > input{
   flex: 1;
+}
+.function>input,.browse>input,.addBrowse>textarea{
   border: none;
   outline: none;
 }
@@ -71,33 +74,28 @@
   width: 17px;
   height: 18px;
 }
+.functionPlace::placeholder,.allbutton{
+  font-size: 11px;
+}
 .functionPlace::placeholder{
   color: black;
   padding-left: 2px;
-  font-size: 11px;
 }
-.browseContent,.Content {
+.browseContent,.Content ,.function{
   margin-top: 1px;
 }
 .reference {
   margin-top: 2px;
 }
-.browse {
+.browse,.addBrowse {
   width: 80%;
 }
 .addBrowse {
-  width: 80%;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 .addBrowse > textarea {
-  border: none;
-  outline: none;
   resize: none;
-}
-
-.buttons {
-  flex-direction: column;
 }
 .allbutton {
   width: 80px;
@@ -105,19 +103,20 @@
   padding: 6px 0px;
   cursor: pointer;
   border-radius: 4px;
-  font-size: 11px;
   outline-offset: -3px;
 }
-.ok {
+.allbutton:hover {
   outline-offset: -2px;
   box-shadow: inset -1px 1px #cee7ff, inset 1px 2px #bcd4f6, inset -2px 2px #bcd4f6, inset 1px -1px #bcd4f6, inset 2px -2px #bcd4f6;
 }
 form {
   align-items: flex-end;
 }
+input[type="checkbox"]:after,legend{
+  font-size: 12px;
+}
 legend {
   color: #237bce;
-  font-size: 12px;
   font-weight: normal;
 }
 fieldset {
@@ -127,7 +126,6 @@ fieldset {
   border: 1px solid rgb(162 149 149 / 38%);
 }
 .checklistContent{
-  display: flex;
   margin-top: 3px;
 }
 .checkList {
@@ -149,7 +147,6 @@ input[type="checkbox"]:after {
   font-family: "font awesome 5 free";
   content: "\f00c";
   font-weight: 700;
-  font-size: 12px;
   display: none;
 }
 input[type="checkbox"]:checked:after {

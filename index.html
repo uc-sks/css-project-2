@@ -26,30 +26,34 @@
         <div class="contentContainer">
           <div class="functionsDiv">
             <label for="function" class="functionLable">Function:</label>
-            <div class="function">
-              <input type="text" class="functionPlace" placeholder="Sum">
+            <!-- <div class="function">
+              <input type="text" class="functionPlace" placeholder="Sum" >
               <img src="./img/dropdown.svg" alt="">
-            </div>
+            </div> -->
+            <select id="function" class="function">
+              <option value="sum">sum</option>
+              <option value="mul">mul</option>
+            </select>
           </div>
           <div class="reference">
             <label for="reference" class="functionLable"><u>R</u>eference:</label>
             <div class="browseContent">
               <div class="browse">
-                <input type="text" id="reference" />
+                <input type="text" id="reference"  accesskey="r"/>
                 <img src="./img/browse.png" alt="">
               </div>
-              <button class="browseButton allbutton">Browse...</button>
+              <button class="browseButton allbutton" accesskey="b">Browse...</button>
             </div>
           </div>
           <div class="allReference reference">
             <label for="allReference" class="">All Reference:</label>
             <div class="Content">
               <div class="addBrowse">
-                  <textarea name="allReference" id="allReference" cols="50" rows="4"></textarea>
+                  <textarea name="allReference" id="allReference" cols="50" rows="4" accesskey="r"></textarea>
               </div>
               <div class="buttons">
-                  <button class="add allbutton">Add</button>
-                  <button class="delete allbutton">Delete</button>
+                  <button class="add allbutton" accesskey="A">Add</button>
+                  <button class="delete allbutton" accesskey="d">Delete</button>
                 </div>
             </div>
           </div>
@@ -58,23 +62,23 @@
                 <fieldset>
                  <legend>Use labels in</legend>
                  <div class="checklistContent">
-                     <input type="checkbox" name="" id="">
+                     <input type="checkbox" name="" id="" accesskey="t">
                      <label for=""><u>T</u>op row</label>
                  </div>
                  <div class="checklistContent">
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="" id="" accesskey="l">
                     <label for=""><u>L</u>eft column</label>
                  </div>
                 </fieldset>
                 <div class="create checklistContent">
-                  <input type="checkbox" name="create" id="create">
+                  <input type="checkbox" name="create" id="create" accesskey="s">
                   <label for="create">Create links to <u>s</u>ource data</label>
                 </div>
                </form>
           </div>
           <div class="actionButton reference">
-            <button class="allbutton ok">Ok</button>
-            <button class="allbutton">Close</button>
+            <button class="allbutton ok" accesskey="o">Ok</button>
+            <button class="allbutton" accesskey="c">Close</button>
           </div>
         </div>
       </div>
