@@ -59,16 +59,16 @@
 .function {
   width: 50%;
   padding: 1px 0px;
-  outline: none;
-  appearance: none;
   background: transparent url(./img/dropdown.svg) no-repeat 100% center;
 }
 .function > input ,.browse > input{
   flex: 1;
 }
+.function>input,.browse>input,.addBrowse>textarea,.function{
+  outline: none;
+}
 .function>input,.browse>input,.addBrowse>textarea{
   border: none;
-  outline: none;
 }
 .function > img {
   width: 17px;
@@ -137,7 +137,6 @@ fieldset {
   margin-left: 3px;
 }
 input[type="checkbox"] {
-  appearance: none;
   height: 14px;
   width: 14px;
   background: linear-gradient(to bottom, #e6e6e3, #ffffff);
@@ -167,4 +166,8 @@ input[type="checkbox"]:checked:after {
 .delete::first-letter,
 .functionLable::first-letter {
   text-decoration: underline;
+}
+
+input[type="checkbox"],.function{
+  appearance: none;
 }
